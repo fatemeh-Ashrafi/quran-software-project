@@ -1,36 +1,39 @@
-.App{
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(239, 238, 166);
-    display: flex;
-    flex-direction: column;
-    padding-top: 30px;
-}
-.option-Search{
-    width: 200px;
-    height: 50px;
-    padding-right:7px; 
-    padding-left:7px; 
-    margin-left: 500px;
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    border: 2px solid rgb(95, 95, 95);
-    border-radius: 25px;
-    text-align: center;
-    align-items: center;
-    background-color: darkgrey;
-    color: aliceblue;
-    font-family: Arial, Helvetica, sans-serif;
+.App { 
+    width: 100%; 
+    background-color: rgb(239, 238, 166); 
+    display: flex; 
+    align-items: center; 
+    flex-direction: column; 
+    padding-top: 30px; 
+} 
 
-}
-.input-search{
-    margin-right: 20px;
-    direction: rtl;
-}
-.input-search input{
-    border: 2px solid rgb(66, 66, 66);
-    border-radius: 10px;
-    outline: none;
-    padding-right: 7px;
+.title { 
+    font-size: 20px; 
+    width: 200px; 
+    height: 30px; 
+    padding: 4px; 
+    font-weight: bold; 
+    text-align: center; 
+    border-radius: 5px; 
+    background-color: rgb(154, 152, 152); 
+    border: 2px solid rgb(78, 78, 79); 
+} 
+.input { 
+    width: 200px; 
+    height: 25px; 
+    direction: rtl; 
+    border: 1px solid black; 
+    border-radius: 5px; 
+    padding: 10px; 
+    font-size: 20px; 
+    outline: none; 
+} 
+.item { 
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    gap: 40px; 
+    justify-content: start; 
+    align-items: start; 
+    padding: 20px 100px; 
 }

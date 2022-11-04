@@ -1,17 +1,49 @@
-import React from 'react';
-import './MenoSearch.css'
+import React, { useState } from "react"; 
+import "./MenoSearch.css"; 
+import { QuranData } from "../../Data/quran-metadata"; 
+import { Link } from "react-router-dom";
 
-function MenoSearch() {
-  return (
-    <div className='App'>
-      <div className='option-Search'>
-          <h1>سوره</h1>
-      </div>
-      <div className='input-search'>
-        <input type="text" style={{"width":"160px","height":"30px"}}  placeholder='نام سوره تایپ کنید ...'/>
-      </div>
-    </div>
-  )
-}
+// import DATA from '../../Data/quran-text-emla.json'
+ 
+function MenoSearch() { 
+    const [searchFilter, setSearchFilter] = useState(QuranData.Suras); 
 
-export default MenoSearch
+    const handelChange = (e) => { 
+        const value = e.target.value; 
+        if (value === "") { 
+            setSearchFilter(QuranData.Suras); 
+        } else { 
+            const filter = QuranData.Suras.filter((item) => { 
+                return item.includes(value.toLowerCase()); 
+            }); 
+            setSearchFilter(filter); 
+        } 
+    }; 
+    // const data = JsonData.slice(0,7)
+
+    return ( 
+         <>
+            <h3 className="title">سوره</h3> 
+             
+                <input 
+                    type="text" 
+                    placeholder="جستجو ..." 
+                    className="input" 
+                    onChange={(e) => handelChange(e)} 
+                    /> 
+
+                    
+
+                    {searchFilter?.map((item, index) => {
+                        console.log(item)
+                        return <div key={index}>
+                            {/* <h3 key={index}>{item[4]}</h3> */}
+                            <Link to={`/surah/${item[4]}`} >{item[4]}</Link>
+                            {/* <p>{DATA.slice(index.id)}</p> */}
+                            </div> 
+                            // { {QuranData.Suras.slice(index.id)}}
+                    })} 
+                </>
+    ); 
+} 
+export default MenoSearch;
