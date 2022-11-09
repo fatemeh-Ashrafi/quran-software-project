@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "./MenoSearch.css"; 
 import { QuranData } from "../../Data/quran-metadata"; 
 import { Link } from "react-router-dom";
-
-// import DATA from '../../Data/quran-text-emla.json'
  
 function MenoSearch() { 
     const [searchFilter, setSearchFilter] = useState(QuranData.Suras); 
@@ -18,32 +16,23 @@ function MenoSearch() {
             }); 
             setSearchFilter(filter); 
         } 
-    }; 
-    // const data = JsonData.slice(0,7)
+    };
 
     return ( 
-         <>
+         <div className="menu">
             <h3 className="title">سوره</h3> 
-             
                 <input 
                     type="text" 
-                    placeholder="جستجو ..." 
+                    placeholder="نام سوره را تایپ کنید ..." 
                     className="input" 
                     onChange={(e) => handelChange(e)} 
                     /> 
-
-                    
-
                     {searchFilter?.map((item, index) => {
-                        console.log(item)
                         return <div key={index}>
-                            {/* <h3 key={index}>{item[4]}</h3> */}
-                            <Link to={`/surah/${item[4]}`} >{item[4]}</Link>
-                            {/* <p>{DATA.slice(index.id)}</p> */}
+                        <Link to={`/surah/${item[4]}`} ><h4 className="item">{item[4]}</h4></Link>
                             </div> 
-                            // { {QuranData.Suras.slice(index.id)}}
                     })} 
-                </>
+                </div>
     ); 
 } 
 export default MenoSearch;

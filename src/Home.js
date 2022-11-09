@@ -1,10 +1,16 @@
+import './Home.css'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
 function Home() {
   return (
-    <div>
-      <Link to="/search"><button>quran</button></Link> 
+    <div className='home'>
+      <div className='sureh'>
+       <Link to="/search"><button>قرآن</button></Link>
+      </div>
+      <div className='setting'>
+      <Link to="/setting"><button>تنظیمات</button></Link> 
+      </div>
     </div>
   )
 }
