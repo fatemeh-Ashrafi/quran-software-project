@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "./MenoSearch.css"; 
 import { QuranData } from "../../Data/quran-metadata"; 
 import { Link } from "react-router-dom";
+import { Text } from "../../Svg/IconText";
+import { Number } from "../../Svg/IconNumber";
+import { Play } from "../../Svg/IconPlay";
  
 function MenoSearch() { 
     const [searchFilter, setSearchFilter] = useState(QuranData.Suras); 
@@ -20,6 +23,7 @@ function MenoSearch() {
 
     return ( 
          <div className="menu">
+            <div className="textheader"> <Text/></div>
             <h3 className="title">سوره</h3> 
                 <input 
                     type="text" 
@@ -28,9 +32,25 @@ function MenoSearch() {
                     onChange={(e) => handelChange(e)} 
                     /> 
                     {searchFilter?.map((item, index) => {
-                        return <div key={index}>
-                        <Link to={`/surah/${item[4]}`} ><h4 className="item">{item[4]}</h4></Link>
-                            </div> 
+                        return(
+                            <div className="surah" >
+
+                                <div key={index}>
+                                <Link style={{textDecoration: 'none'}} to={`/surah/${item[4]}`} >
+                                        <div className="contaner">
+                                            <div>
+                                            <div className="play"><Play/></div>
+                                            </div>
+                                                <div className="item">
+                                                    {item[4]}
+                                                    <div className="number"><Number/>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                </Link>
+                               </div>
+                            </div>   
+                        )
                     })} 
                 </div>
     ); 
