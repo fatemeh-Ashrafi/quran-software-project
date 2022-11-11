@@ -2,9 +2,10 @@ import './SearchSurah.css'
 import JsonData from "../../Data/quran-text-emla.json";
 import { QuranData } from "../../Data/quran-metadata";
 import { useParams } from "react-router-dom";
-// import fontSize from '../../Setting/FontSize/Feature/FontSize'
-import { store } from '../../Setting/FontSize/Components/Store';
-// import FontSizeSlice from '../../Setting/FontSize/Feature/FontSizeSlice';
+// import FontSize from '../../Setting/FontSize/Feature/FontSize';
+import { useSelector } from 'react-redux';
+import Theme from '../../Setting/Theme/Theme';
+
 
 export default function SearchSurah() {
 
@@ -12,15 +13,15 @@ export default function SearchSurah() {
     const [data] = QuranData.Suras.filter((item)=>{
         return item[4] === param.id;
     })
-    const surah = JsonData.slice(data[0],data[0] + data[1])
-    
+    const surah = JsonData.slice(data[0],data[0] + data[1]);
+
+    const fontSizee = useSelector((state) =>state.fontSize.value.font);
+
+
+
     return(
-        // <div className='surahtext'  style={{fontSize : `${fontSize}px`}}>
-        // {/* <div className='surahtext'  style={{fontSize :`${FontSizeSlice}`}}> */}
-        <div className='surahtext'  style={{fontSize : `${store}px`}}>
-
-
-            
+        <div className='surahtext'  style={{fontSize : `${fontSizee}px` , backgroundColor: `${Theme}`}}>
+     
             <div className='headerquran'>بسم الله الرحمن الرحیم</div>
             {surah.map((item,index)=>{
                 return( 
