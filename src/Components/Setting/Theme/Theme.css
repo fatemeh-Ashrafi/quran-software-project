@@ -1,23 +1,11 @@
 .App {
     width: 100vw;
     height: 100vh;
-    
-  }
-  
-  #light {
-    background-color: #f3ebf6;
-  }
-  
-  #dark {
-    background-color: #090909;
-  }
-  
-  
-  .switch {
-   
+}
+
+.switch {
     /* width: 100vw;
     height: 100px; */
     justify-content: center;
     align-items: center;
-  }
- 
+}

@@ -1,26 +1,39 @@
-import './Theme.css'
-import React, { createContext, useState } from 'react';
-import ReactSwitch from 'react-switch'
+import "./Theme.css";
+import React, { createContext, useState, useEffect } from "react";
+import ReactSwitch from "react-switch";
 
 export const ThemeContext = createContext("light");
 
 function Theme() {
+    const [themeState, setThemeState] = useState(false);
 
-    const [theme,setTheme] =useState('light');
+    useEffect(() => {
+        const getTheme = localStorage.getItem("Them");
+        if (getTheme === "dark") {
+            setThemeState(true);
+        }
+    }, []);
 
-    const handleTheme =()=>{
-        setTheme((item)=> (item === "light" ? "dark" : "light"))
-    }
+    useEffect(() => {
+        if (themeState) {
+            localStorage.setItem("Them", "dark");
+            document.body.classList.add("dark-mode");
+        } else {
+            localStorage.setItem("Them", "light");
+            document.body.classList.remove("dark-mode");
+        }
+    }, [themeState]);
 
-  return (
-    <ThemeContext.Provider value={{theme , handleTheme}}>
-    <div className='App' id={theme}>
-        <div className='switch'>
-            <ReactSwitch onChange={handleTheme} checked={theme==="dark"}/>
+    return (
+        <div className="App">
+            <div className="switch">
+                <ReactSwitch
+                    onChange={() => setThemeState(!themeState)}
+                    checked={themeState === true}
+                />
+            </div>
         </div>
-    </div> 
-    </ThemeContext.Provider>
-  )
+    );
 }
 
-export default Theme
+export default Theme;
