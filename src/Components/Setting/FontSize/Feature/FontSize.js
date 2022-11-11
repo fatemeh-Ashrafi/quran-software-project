@@ -11,7 +11,6 @@ const FontSize =()=> {
             <button onClick={()=> dispatch(addFont())}>+ add</button>
             <button onClick={()=> dispatch(removeFont())}>- remove</button>
             <p style={{fontSize : `${fontSizee}px`}}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum esse reprehenderit temporibus, doloremque possimus qui assumenda asperiores quis dolore quos dolorem, iusto iure ex explicabo voluptatum illum adipisci aliquam modi!
               </p>
               </div>
     </div>
