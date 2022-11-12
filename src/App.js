@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import MenoSearch from "./Components/Search/StyleSearch/MenoSearch";
 import SearchSurah from "./Components/Search/SearchSurah/SearchSurah";
 import Home from "./Home";
@@ -9,6 +9,7 @@ import Setting from "./Components/Setting/Setting";
 
 function App() {
     return (
+        
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/search" element={<MenoSearch />} />
@@ -17,6 +18,7 @@ function App() {
             {/* <Route path='/setting' element={<FontSize/>}/> */}
             <Route path="/setting" element={<Setting />} />
         </Routes>
+        
     );
 }
 
