@@ -4,10 +4,7 @@ import MenoSearch from "./Components/Search/StyleSearch/MenoSearch";
 import SearchSurah from "./Components/Search/SearchSurah/SearchSurah";
 import Home from "./Home";
 import Setting from "./Components/Setting/Setting";
-// import TextSurah from "./Components/Search/TarjomehSurah/TextSurah";
-// import TextSurah from "./Components/Search/TarjomehSurah/TextSurah";
-// import Theme from './Components/Setting/Theme/Theme';
-// import FontSize from './Components/Setting/FontSize/Feature/FontSize';
+
 
 function App() {
     return (
@@ -16,10 +13,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/search" element={<MenoSearch />} />
             <Route path="/surah/:id" element={<SearchSurah />} />
-            {/* <Route path='/setting' element={<Theme/>}/> */}
-            {/* <Route path='/setting' element={<FontSize/>}/> */}
             <Route path="/setting" element={<Setting />} />
-            {/* <Route path="/text" element={<TextSurah/>}/> */}
         </Routes>
         
     );

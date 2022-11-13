@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { Text } from "../../Svg/IconText";
 import { Number } from "../../Svg/IconNumber";
 import { Play } from "../../Svg/IconPlay";
-// import TextSurah from "../TarjomehSurah/TextSurah";
  
 function MenoSearch() { 
     const [searchFilter, setSearchFilter] = useState(QuranData.Suras); 
@@ -21,19 +20,6 @@ function MenoSearch() {
         } 
     };
 
-    // let element=[] ;
-
-    //  for (let i = 1; i < QuranData.Suras.length; i++) {
-       
-    //     element.push(i)
-    // }
-    // console.log(element)
-    
-
-
-
-
-
     return ( 
          <div className="menu">
             <div className="textheader"> <Text/></div>
@@ -44,7 +30,6 @@ function MenoSearch() {
                     className="input" 
                     onChange={(e) => handelChange(e)} 
                     /> 
-            {/* <TextSurah/> */}
 
                     {searchFilter?.map((item, index) => {
                         return(

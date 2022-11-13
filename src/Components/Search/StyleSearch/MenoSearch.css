@@ -42,17 +42,14 @@
 }
 .contaner{
     display: flex;
-    /* flex-direction: row; */
     justify-content:space-between;
     width: 150vh;
     height: 35px;
     background-color: rgba(212, 206, 196, 0.5);
     color: rgb(9, 9, 9);
-    /* text-align:right; */
     align-items: center;
     padding: 15px;
     border-radius: 12px;
-   
 }
 
 .play{
@@ -62,9 +59,6 @@
 }
 
 .item {
-    /* width: 150vh;
-    height: 35px;
-    background-color: rgba(212, 206, 196, 0.5); */
     color: rgb(9, 9, 9);
     text-align:right;
     align-items: center;
@@ -74,30 +68,21 @@
     display: flex;
     justify-content:flex-end;
     font-size: 20px;
-
 }
 .number{
     width: 55px;
     text-align: right;
-    /* padding-left: 30px; */
 }
 
 .countsourh{
-    
-    /* margin-top: 5px; */
     position: absolute;
     padding-left: 17px;
     padding-top: 10px;
     font-size: medium;
-    
 }
 
-
 .a1{
-    
     display: flex;
     margin-left: 20px;
     position: relative;
-    
-
 }

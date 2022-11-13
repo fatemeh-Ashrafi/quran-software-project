@@ -3,61 +3,55 @@
     padding: 100px;
     text-align:right;
     background-image: url("https://app.nasimrezvan.com/assets/dashboard-section-box-bg.62578d0.png");
-    /* background-size: 100% ; */
 }
 .headerquran{
-    width: 50%;
-    height: 25vh;
+    width: 40%;
+    height: 27vh;
     background: linear-gradient(135deg, #3DB9D9 0%, #23849D 100%);
     box-shadow: 0px 0.313rem 1.125rem 1px rgb(57 176 206 / 46%);
-   
     border-radius: 1.25rem;
-
     align-items: center;
     text-align: center;
-
-
     margin-left: 20rem;;
-
+    position: relative;
     padding: 20px;
+    display: flex;
 }
 .itemsurah{
-
     width: 100%;
     background-color: rgba(237, 232, 232, 0.635);
     border: 1px solid black;
     border-radius: 20px;
-
     margin: 30px;
     padding: 20px;
-
 }
 
 .surah{
-    /* margin: 30px; */
-    /* margin-top: 10px;
-    margin-bottom: 10px; */
-    /* padding: 5px; */
     color: #060606;
     margin: 8px;
     padding: 5px;
 }
-.translation{
-    /* margin: 30px;
-    padding: 5px; */
+/* .translation{
     color: #4F410F;
     margin: 8px;
     padding: 5px;
-}
-
-
+} */
 .icontextsurah{
 
-    color: white;
-    width: 50%;
-    height: 40%;
+    color: rgb(253, 251, 251);
+    width: 60%;
+    height: 50%;
     display: flex;
     justify-content:right;
-    padding-left: 10rem;
-    padding-top: 6rem;
+    padding-left: 7rem;
+    padding-top: 8rem;
+    position: absolute;
+
+}
+
+.image{
+    max-width: 100%;
+    width: 100%;
+    padding-left: 16.7rem;
+
 }
