@@ -24,7 +24,7 @@ export default function SearchSurah() {
 
             <div className='headerquran'>
                 <div className='image'>
-                    {/* <img src="https://app.nasimrezvan.com/assets/quran-backdrop.7b12a1e.svg" /> */}
+                    <img src="https://app.nasimrezvan.com/assets/quran-backdrop.7b12a1e.svg" />
                 </div>
                 <div className='icontextsurah'><IconTextSurah/></div>
             </div>
@@ -35,8 +35,8 @@ export default function SearchSurah() {
                 return( 
                     <div className="itemsurah">
                          <div className='surah' >{item}</div>  
+                        <div>{<SurahTranslation/>}</div>
                        
-                        <div><SurahTranslation/></div>
                         
                     </div>
                 )
