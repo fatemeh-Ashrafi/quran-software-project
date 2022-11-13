@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import Theme from '../../Setting/Theme/Theme';
 import { IconTextSurah } from '../../Svg/IconTextSurah';
+import SurahTranslation from '../SurahTranslation/SurahTranslation';
 
 export default function SearchSurah() {
 
@@ -23,15 +24,20 @@ export default function SearchSurah() {
 
             <div className='headerquran'>
                 <div className='image'>
-                    <img src="https://app.nasimrezvan.com/assets/quran-backdrop.7b12a1e.svg" />
+                    {/* <img src="https://app.nasimrezvan.com/assets/quran-backdrop.7b12a1e.svg" /> */}
                 </div>
                 <div className='icontextsurah'><IconTextSurah/></div>
             </div>
 
+
+
             {surah.map((item)=>{
                 return( 
                     <div className="itemsurah">
-                         <div className='surah' >{item}</div>                 
+                         <div className='surah' >{item}</div>  
+                       
+                        <div><SurahTranslation/></div>
+                        
                     </div>
                 )
             })}
