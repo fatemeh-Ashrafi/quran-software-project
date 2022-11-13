@@ -74,9 +74,30 @@
     display: flex;
     justify-content:flex-end;
     font-size: 20px;
+
 }
 .number{
-    width: 40px;
+    width: 55px;
     text-align: right;
-    padding-left: 30px;
+    /* padding-left: 30px; */
+}
+
+.countsourh{
+    
+    /* margin-top: 5px; */
+    position: absolute;
+    padding-left: 17px;
+    padding-top: 10px;
+    font-size: medium;
+    
+}
+
+
+.a1{
+    
+    display: flex;
+    margin-left: 20px;
+    position: relative;
+    
+
 }

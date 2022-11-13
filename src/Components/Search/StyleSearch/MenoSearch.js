@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 import { Text } from "../../Svg/IconText";
 import { Number } from "../../Svg/IconNumber";
 import { Play } from "../../Svg/IconPlay";
+// import TextSurah from "../TarjomehSurah/TextSurah";
  
 function MenoSearch() { 
     const [searchFilter, setSearchFilter] = useState(QuranData.Suras); 
-
     const handelChange = (e) => { 
         const value = e.target.value; 
         if (value === "") { 
@@ -21,6 +21,19 @@ function MenoSearch() {
         } 
     };
 
+    // let element=[] ;
+
+    //  for (let i = 1; i < QuranData.Suras.length; i++) {
+       
+    //     element.push(i)
+    // }
+    // console.log(element)
+    
+
+
+
+
+
     return ( 
          <div className="menu">
             <div className="textheader"> <Text/></div>
@@ -31,11 +44,14 @@ function MenoSearch() {
                     className="input" 
                     onChange={(e) => handelChange(e)} 
                     /> 
+            {/* <TextSurah/> */}
+
                     {searchFilter?.map((item, index) => {
                         return(
                             <div className="surah" >
+                                
 
-                                <div key={index}>
+                                <div >
                                 <Link style={{textDecoration: 'none'}} to={`/surah/${item[4]}`} >
                                         <div className="contaner">
                                             <div>
@@ -43,7 +59,10 @@ function MenoSearch() {
                                             </div>
                                                 <div className="item">
                                                     {item[4]}
-                                                    <div className="number"><Number/>
+
+                                                    <div className="a1">
+                                                    <span className="countsourh">{index+=1}</span>
+                                                    <div className="number"><Number/></div>
                                                 </div>
                                             </div>
                                         </div>  
