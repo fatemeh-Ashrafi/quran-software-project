@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-const initialState = {
-  font:18,
-};
+// const initialState = {
+//   font:18,
+// };
 export const FontSizeSlice = createSlice({
   name: "fontSize",
-  initialState:{value:initialState},
+  initialState:{value:18},
   reducers: {
     addFont: (state) => {
       state.value.font +=2;

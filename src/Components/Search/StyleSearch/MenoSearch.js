@@ -34,8 +34,7 @@ function MenoSearch() {
                     {searchFilter?.map((item, index) => {
                         return(
                             <div className="surah" >
-                                
-
+        
                                 <div >
                                 <Link style={{textDecoration: 'none'}} to={`/surah/${item[4]}`} >
                                         <div className="contaner">

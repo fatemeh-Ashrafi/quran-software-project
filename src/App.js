@@ -4,7 +4,6 @@ import MenoSearch from "./Components/Search/StyleSearch/MenoSearch";
 import SearchSurah from "./Components/Search/SearchSurah/SearchSurah";
 import Home from "./Home";
 import Setting from "./Components/Setting/Setting";
-import SurahTranslation from "./Components/Search/SurahTranslation/SurahTranslation";
 
 
 function App() {
@@ -14,9 +13,6 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/search" element={<MenoSearch />} />
             <Route path="/surah/:id" element={<SearchSurah />} />
-            <Route path="/surah/translate/:id" element={<SurahTranslation />} />
-
-            {/* <Route path="/translate/:id" element={<SurahTranslation />} /> */}
             <Route path="/setting" element={<Setting />} />
         </Routes>
         

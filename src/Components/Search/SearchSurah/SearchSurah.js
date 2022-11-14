@@ -5,17 +5,20 @@ import { useParams } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import Theme from '../../Setting/Theme/Theme';
 import { IconTextSurah } from '../../Svg/IconTextSurah';
-import SurahTranslation from '../SurahTranslation/SurahTranslation';
+import Translation from '../../Data/quran-translate.fa.makarem.json'
 
 export default function SearchSurah() {
 
     const param = useParams();
 
     const [data] = QuranData.Suras.filter((item)=>{
+        
         return item[4] === param.id;
     })
 
     const surah = JsonData.slice(data[0],data[0] + data[1]);
+    const surahTranslate = Translation.slice(data[0],data[0] + data[1]);
+
 
     const fontSizee = useSelector((state) =>state.fontSize.value.font);
 
@@ -29,17 +32,16 @@ export default function SearchSurah() {
                 <div className='icontextsurah'><IconTextSurah/></div>
             </div>
 
-
-
-            {surah.map((item)=>{
+            {surah.map((item,index)=>{
                 return( 
-                    <div className="itemsurah">
-                         <div className='surah' >{item}</div>  
-                        <div>{<SurahTranslation/>}</div>
-                       
-                        
-                    </div>
+                    <>
+                        <div className="itemsurah">
+                             <div className='surah' >{item}</div>
+                            <div>{surahTranslate[index]}</div>
+                        </div>                    
+                    </>
                 )
+                
             })}
             
         </div>
