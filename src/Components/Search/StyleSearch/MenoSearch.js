@@ -20,6 +20,7 @@ function MenoSearch() {
         } 
     };
 
+    
     return ( 
          <div className="menu">
             <div className="textheader"> <Text/></div>
@@ -31,10 +32,11 @@ function MenoSearch() {
                     onChange={(e) => handelChange(e)} 
                     /> 
 
-                    {searchFilter?.map((item, index) => {
+                   
+                    {searchFilter?.map((item,index) => {
                         return(
                             <div className="surah" >
-        
+                                    
                                 <div >
                                 <Link style={{textDecoration: 'none'}} to={`/surah/${item[4]}`} >
                                         <div className="contaner">
@@ -46,6 +48,8 @@ function MenoSearch() {
 
                                                     <div className="a1">
                                                     <span className="countsourh">{index+=1}</span>
+                                                    
+
                                                     <div className="number"><Number/></div>
                                                 </div>
                                             </div>

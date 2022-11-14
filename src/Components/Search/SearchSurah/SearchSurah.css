@@ -1,3 +1,24 @@
+/* @font-face {
+    font-family: "me-quran";
+    src: url(../../Font/me-quran.ttf);
+} */
+/* @font-face {
+    font-family: "me-quran";
+    src: url(../../Font/me-quran.eot);
+} */
+ /* @font-face {
+    font-family: "me-quran";
+    src: url(../../Font/me-quran.woff);
+}  */
+/* @font-face {
+    font-family: "me-quran";
+    src: url(../../Font/me-quran.woff2);
+}  */
+@font-face {
+    font-family: "IRANSansWeb";
+    src: url(../../Font/IRANSansWeb_Black.ttf);
+} 
+
 .surahtext{
 
     padding: 100px;
@@ -30,12 +51,24 @@
     color: #060606;
     margin: 8px;
     padding: 5px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-size: 25px; */
+    font-weight: bold;
+    word-spacing: 5px;
+    line-height: 3rem;
+
+
 }
-/* .translation{
+.translate{
     color: #4F410F;
     margin: 8px;
     padding: 5px;
-} */
+    font-family: IRANSansWeb_Black;
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    /* font-size: 20px; */
+    word-spacing: 3px;
+    line-height: 2rem;
+}
 .icontextsurah{
 
     color: rgb(253, 251, 251);

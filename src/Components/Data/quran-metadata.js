@@ -6,9 +6,7 @@
 export const QuranData = {};
 //------------------ Sura Data ---------------------
   QuranData.Suras = [
-	// [start, ayas, order, rukus, name, tname, ename, type]
-	// [],
-	// {id:1,start:0,ayas:7,order:5,rukus:1,name:"الفاتحه",tname:"Al-Faatiha",ename:"The Opening",type:"meccan"}
+	
 	[0, 7, 5, 1, 'الفاتحة', "Al-Faatiha", 'The Opening', 'Meccan'],
 	[7, 286, 87, 40, 'البقرة', "Al-Baqara", 'The Cow', 'Medinan'],
 	[293, 200, 89, 20, 'آل عمران', "Aal-i-Imraan", 'The Family of Imraan', 'Medinan'],

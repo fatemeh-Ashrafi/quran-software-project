@@ -67,7 +67,9 @@
     border-radius: 12px;
     display: flex;
     justify-content:flex-end;
-    font-size: 20px;
+    font-size: 22px;
+
+
 }
 .number{
     width: 55px;
@@ -85,4 +87,15 @@
     display: flex;
     margin-left: 20px;
     position: relative;
+}
+
+.element{
+    /* display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align:start;
+    align-items:flex-end;
+    padding-right: 100px;
+    margin-left: 150px;
+    margin-right: 100px; */
 }
