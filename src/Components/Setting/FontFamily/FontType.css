@@ -1,0 +1,15 @@
+ @font-face {
+    font-family: "Vazir";
+    src: url(../../Font/Vazir.ttf);
+} 
+
+.aq{
+    font-family: Vazir;
+}
+@font-face {
+    font-family: "Yekan";
+    src: url(../../Font/Yekan.ttf);
+} 
+.aw{
+    font-family: Yekan;
+}

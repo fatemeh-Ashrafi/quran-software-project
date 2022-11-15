@@ -1,9 +1,9 @@
 .add{
-    font-size:16px;
+    font-size:14px;
 }
 
 .remove{
-    font-size:14px;
+    font-size:12px;
 }
 .fontsize{
     display: flex;
@@ -12,12 +12,24 @@
 }
 .buttonsize{
     display: flex;
-
+    flex-direction: column;
+}
+.qq{
+    display: flex;
+    flex-direction: column;
+}
+.textsurah{
+    display: flex;
+    /* flex-direction: column; */
+    padding-right: 70px;
 }
 
-.textnumber{
+.texttranslate{
     display: flex;
+    /* flex-direction: row; */
+    /* text-align: center; */
     padding-right: 70px;
+
 }
 h1{
     padding-right: 20px;

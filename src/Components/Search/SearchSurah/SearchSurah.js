@@ -13,6 +13,7 @@ import Translation from '../../Data/quran-translate.fa.makarem.json';
 // import '../../Font/me-quran.woff'
 // import "../../Font/me-quran.woff2"
 import "../../Font/IRANSansWeb_Black.ttf"
+import FontType from '../../Setting/FontFamily/FontType';
 
 export default function SearchSurah() {
 
@@ -29,9 +30,11 @@ export default function SearchSurah() {
 
     const fontSizee = useSelector((state) =>state.fontSize.value.font);
     console.log(fontSizee)
+    const fontSizetarjomeh= useSelector((state) =>state.fontSize.value.fonttarjom);
+
     return(
         <div className='surahtext
-        'style={{fontSize:`${fontSizee}px` , backgroundColor: `${Theme}`}}  >
+        'style={{  backgroundColor: `${Theme}` , fontFamily:<FontType/>}}  >
 
 
             <div className='headerquran'>
@@ -45,8 +48,11 @@ export default function SearchSurah() {
                 return( 
                     <>
                         <div className="itemsurah">
-                             <div className='surah' >{item}</div>
-                            <div className='translate'>{surahTranslate[index]}</div>
+                             <div className='surah' 
+                             style={{fontSize:`${fontSizee}px`}} >{item}</div>
+                             
+                            <div className='translate'
+                            style={{fontSize:`${fontSizetarjomeh}px`}}>{surahTranslate[index]}</div>
                         </div>                    
                     </>
                 )

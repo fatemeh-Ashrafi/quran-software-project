@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
-  font:30,
+  font:24,
+  fonttarjom:24,
 };
 export const FontSizeSlice = createSlice({
   name: "fontSize",
@@ -12,7 +13,13 @@ export const FontSizeSlice = createSlice({
     removeFont:(state)=>{
         state.value.font -=2;
     },
+    addtranslate: (state) => {
+      state.value.fonttarjom +=2;
+    },
+    removetranslate:(state)=>{
+        state.value.fonttarjom -=2;
+    },
   },
 });
-export const { addFont , removeFont } = FontSizeSlice.actions;
+export const { addFont , removeFont,addtranslate,removetranslate } = FontSizeSlice.actions;
 export default FontSizeSlice.reducer;
